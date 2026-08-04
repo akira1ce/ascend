@@ -22,6 +22,7 @@ export function VocabList({ groups }: { groups: VocabGroup[] }) {
 							<Link
 								key={entry.id}
 								href={`/peanut-vocab/${entry.id}`}
+								prefetch={false}
 								className="group hover:bg-muted/70 focus-visible:bg-muted grid min-h-18 grid-cols-[2.75rem_minmax(0,1fr)_1.25rem] items-center rounded-md px-3 py-2.5 transition-all duration-200 outline-none hover:-translate-y-px"
 							>
 								<span className="text-muted-foreground font-mono text-xs tabular-nums">{String(entry.id).padStart(3, "0")}</span>

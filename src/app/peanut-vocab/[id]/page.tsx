@@ -10,6 +10,10 @@ type PageProps = {
 	params: Promise<{ id: string }>;
 };
 
+export function generateStaticParams() {
+	return vocabEntries.map((entry) => ({ id: String(entry.id) }));
+}
+
 function parseEntryId(value: string) {
 	return /^\d+$/.test(value) ? Number(value) : Number.NaN;
 }
