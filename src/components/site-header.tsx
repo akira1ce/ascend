@@ -41,15 +41,12 @@ export function SiteHeader() {
 					className={cn(
 						"bg-background pointer-events-auto relative mx-auto flex items-center justify-between",
 						compact
-							? "border-border top-2 h-12 w-[calc(100%-2rem)] max-w-xl rounded-full border px-2.5 sm:px-3"
+							? "bg-accent/20 top-2 h-12 w-[calc(100%-2rem)] max-w-xl rounded-full px-2.5 shadow backdrop-blur sm:px-3"
 							: "top-0 h-16 w-full max-w-6xl px-5 sm:px-8"
 					)}
 				>
 					<Link className="flex min-h-10 items-center gap-3 rounded-full pr-2" href="/" aria-label="ASCEND 首页">
-						<motion.span
-							layout
-							className={cn("flex shrink-0 items-center justify-center rounded-md", compact ? "size-8" : "size-9")}
-						>
+						<motion.span layout className={cn("flex shrink-0 items-center justify-center rounded-md", compact ? "size-8" : "size-9")}>
 							<Ship className="size-4" aria-hidden="true" />
 						</motion.span>
 						<span className="flex items-baseline gap-3">
