@@ -1,25 +1,22 @@
 {
-  "semi": true,
-  "trailingComma": "es5",
-  "printWidth": 120,
-  "tabWidth": 2,
-  "useTabs": true,
-  "endOfLine": "lf",
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
-  "importOrder": [
-    "^react$",
-    "^react-dom$",
-    "^react/(.*)$",
-    "^react-router(.*)$",
-    "^antd$",
-    "^antd/(.*)$",
-    "^@/(.*)$",
-    "^[./]"
-  ],
-  "importOrderSortSpecifiers": true,
-  "importOrderGroupNamespaceSpecifiers": true,
-  "importOrderCaseInsensitive": true
+	"semi": true,
+	"trailingComma": "es5",
+	"printWidth": 140,
+	"tabWidth": 2,
+	"useTabs": true,
+	"endOfLine": "lf",
+	"plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+	"importOrder": [
+		"^react$",
+		"^react-dom$",
+		"^react/(.*)$",
+		"^react-router(.*)$",
+		"^antd$",
+		"^antd/(.*)$",
+		"^@/(.*)$",
+		"^[./]"
+	],
+	"importOrderSortSpecifiers": true,
+	"importOrderGroupNamespaceSpecifiers": true,
+	"importOrderCaseInsensitive": true
 }
