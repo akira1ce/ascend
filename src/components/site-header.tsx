@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, LibraryBig } from "lucide-react";
+import { LibraryBig, Ship } from "lucide-react";
 import {
   AnimatePresence,
   motion,
@@ -38,7 +38,7 @@ export function SiteHeader() {
           aria-hidden="true"
           initial={false}
           animate={{ opacity: compact ? 0 : 1 }}
-          className="absolute inset-x-0 top-0 h-16 border-b border-border/70 bg-background"
+          className="absolute inset-x-0 top-0 h-16 bg-background"
         />
 
         <motion.div
@@ -48,7 +48,7 @@ export function SiteHeader() {
           className={cn(
             "pointer-events-auto relative mx-auto flex items-center justify-between bg-background",
             compact
-              ? "top-2 h-12 w-[calc(100%_-_2rem)] max-w-xl rounded-full border border-border px-2.5 shadow-lg sm:px-3"
+              ? "top-2 h-12 w-[calc(100%-2rem)] max-w-xl rounded-full border border-border px-2.5 shadow-lg sm:px-3"
               : "top-0 h-16 w-full max-w-6xl px-5 sm:px-8",
           )}
         >
@@ -60,7 +60,7 @@ export function SiteHeader() {
                 compact ? "size-8" : "size-9",
               )}
             >
-              <ArrowUpRight className="size-4" aria-hidden="true" />
+              <Ship className="size-4" aria-hidden="true" />
             </motion.span>
             <span className="flex items-baseline gap-3">
               <span className="text-base font-semibold">ASCEND</span>
@@ -87,18 +87,6 @@ export function SiteHeader() {
               title="查看全部内容"
             >
               <LibraryBig className="size-4 shrink-0" aria-hidden="true" />
-              <AnimatePresence initial={false}>
-                {!compact && (
-                  <motion.span
-                    initial={{ opacity: 0, scale: 0.96 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.96 }}
-                    className="hidden origin-right sm:inline"
-                  >
-                    全部内容
-                  </motion.span>
-                )}
-              </AnimatePresence>
             </Link>
             <span className="mx-1 h-5 w-px bg-border" aria-hidden="true" />
             <ThemeToggle />

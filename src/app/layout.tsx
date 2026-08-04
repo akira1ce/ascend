@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ASCEND · 公考积累工具",
   description: "ASCEND，专注公考词汇与知识积累。",
+  icons: {
+    icon: [{ url: "/ship.svg", type: "image/svg+xml" }],
+    shortcut: "/ship.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
