@@ -40,8 +40,8 @@ export default async function VocabDetailPage({ params }: PageProps) {
 
 	return (
 		<main id="main-content" className="bg-background min-h-screen">
-			<div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-20 sm:px-8 sm:pt-11 sm:pb-24">
-				<header className="border-border flex items-center justify-between gap-5 border-b pb-6">
+			<div className="mx-auto w-full max-w-4xl px-5 pt-8 pb-20 sm:px-8 sm:pt-11 sm:pb-24">
+				<header className="flex items-center justify-between gap-5">
 					<Link
 						href="/peanut-vocab"
 						className="text-muted-foreground hover:text-foreground inline-flex min-h-10 items-center gap-2 rounded-sm pr-2 text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-offset-2"
@@ -54,28 +54,18 @@ export default async function VocabDetailPage({ params }: PageProps) {
 					</p>
 				</header>
 
-				<article className="py-10 sm:py-16">
-					<div className="grid gap-8 md:grid-cols-[12rem_minmax(0,1fr)] md:gap-12">
-						<div className="text-muted-foreground text-sm">
-							<p className="font-medium text-(--peanut-accent)">{entry.type === "idiom" ? "成语" : "词语"}</p>
-							<p className="mt-3 max-w-48 leading-6">{entry.group}</p>
-						</div>
-
-						<div>
-							<h1 className="text-5xl leading-tight font-semibold sm:text-6xl">{entry.term}</h1>
-							<p className="mt-6 text-xl leading-8 font-medium sm:text-2xl">{entry.distinction}</p>
-
-							<section className="mt-12 sm:mt-16" aria-labelledby="definition-heading">
-								<div className="mb-4 flex items-center gap-3">
-									<span className="h-px w-6 bg-(--peanut-accent)" aria-hidden="true" />
-									<h2 id="definition-heading" className="text-sm font-semibold">
-										词义解析
-									</h2>
-								</div>
-								<Definition meaning={entry.meaning} />
-							</section>
-						</div>
+				<article className="pt-12 pb-14 sm:pt-16 sm:pb-20">
+					<div className="text-muted-foreground flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+						<p className="font-medium text-(--peanut-accent)">{entry.type === "idiom" ? "成语" : "词语"}</p>
+						<span aria-hidden="true">·</span>
+						<p>{entry.group}</p>
 					</div>
+
+					<h1 className="mt-6 text-5xl leading-tight font-semibold text-balance sm:text-6xl">{entry.term}</h1>
+
+					<section className="mt-12 sm:mt-16" aria-label="词义解析">
+						<Definition distinction={entry.distinction} meaning={entry.meaning} />
+					</section>
 				</article>
 
 				<DetailNavigation previous={previous} next={next} />

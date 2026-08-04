@@ -42,11 +42,11 @@ export function DetailNavigation({ previous, next }: { previous?: AdjacentEntry;
 	}, [next, previous, router]);
 
 	return (
-		<nav className="border-border grid border-y sm:grid-cols-2" aria-label="相邻词条">
+		<nav className="grid gap-3 sm:grid-cols-2" aria-label="相邻词条">
 			{previous ? (
 				<Link
 					href={`/peanut-vocab/${previous.id}`}
-					className="group border-border hover:bg-muted/55 focus-visible:bg-muted flex min-h-24 items-center gap-4 border-b py-5 pr-5 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-inset sm:border-r sm:border-b-0"
+					className="group hover:bg-muted/65 focus-visible:bg-muted flex min-h-24 items-center gap-4 rounded-md px-4 py-4 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-inset"
 				>
 					<ArrowLeft className="text-muted-foreground size-4 shrink-0 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
 					<span>
@@ -61,7 +61,7 @@ export function DetailNavigation({ previous, next }: { previous?: AdjacentEntry;
 			{next ? (
 				<Link
 					href={`/peanut-vocab/${next.id}`}
-					className="group hover:bg-muted/55 focus-visible:bg-muted flex min-h-24 items-center justify-end gap-4 py-5 pl-5 text-right transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-inset"
+					className="group hover:bg-muted/65 focus-visible:bg-muted flex min-h-24 items-center justify-end gap-4 rounded-md px-4 py-4 text-right transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-inset"
 				>
 					<span>
 						<span className="text-muted-foreground block text-xs">下一条</span>
