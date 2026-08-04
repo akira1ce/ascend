@@ -13,7 +13,7 @@ export default function PeanutVocabPage() {
 	return (
 		<main id="main-content" className="bg-background min-h-screen">
 			<header>
-				<div className="mx-auto w-full max-w-7xl px-5 pt-8 pb-12 sm:px-8 sm:pt-10 sm:pb-16">
+				<div className="mx-auto w-full max-w-6xl px-5 pt-8 pb-12 sm:px-8 sm:pt-10 sm:pb-16">
 					<Link
 						href="/#tools"
 						className="text-muted-foreground hover:text-foreground inline-flex min-h-10 items-center gap-2 rounded-sm pr-2 text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-offset-2"
