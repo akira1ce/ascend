@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <Button variant="outline">Button</Button>
+    <div className="flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <div className="flex items-center gap-2">
+        <Button variant="outline">Button</Button>
+        <ThemeToggle />
+      </div>
     </div>
   );
 }
