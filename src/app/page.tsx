@@ -64,13 +64,6 @@ export default function Home() {
           <p className="mt-6 text-sm text-muted-foreground">更多内容会直接出现在这里。</p>
         </div>
       </section>
-
-      <footer className="border-t border-border">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 text-xs text-muted-foreground sm:px-8">
-          <span>ASCEND</span>
-          <span>公考积累工具</span>
-        </div>
-      </footer>
     </main>
   );
 }

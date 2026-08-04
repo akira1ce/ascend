@@ -16,7 +16,7 @@ export function ThemeToggle() {
     <Button
       type="button"
       variant="outline"
-      size="icon"
+      size="icon-lg"
       className="relative"
       onClick={toggleTheme}
       aria-label="切换深浅主题"
