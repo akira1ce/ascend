@@ -61,37 +61,37 @@ export default function Home() {
                 initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ opacity: 0.25, scaleY: 1 }}
                 transition={{ delay: 0.45, duration: 0.35, ease: easeOut }}
-                className="h-1 w-2 origin-bottom rounded-sm bg-brand"
+                className="h-1 w-2 origin-bottom rounded-sm bg-foreground"
               />
               <motion.span
                 initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ opacity: 0.4, scaleY: 1 }}
                 transition={{ delay: 0.5, duration: 0.35, ease: easeOut }}
-                className="h-2 w-2 origin-bottom rounded-sm bg-brand"
+                className="h-2 w-2 origin-bottom rounded-sm bg-foreground"
               />
               <motion.span
                 initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ opacity: 0.55, scaleY: 1 }}
                 transition={{ delay: 0.55, duration: 0.35, ease: easeOut }}
-                className="h-3 w-2 origin-bottom rounded-sm bg-brand"
+                className="h-3 w-2 origin-bottom rounded-sm bg-foreground"
               />
               <motion.span
                 initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ opacity: 0.7, scaleY: 1 }}
                 transition={{ delay: 0.6, duration: 0.35, ease: easeOut }}
-                className="h-4 w-2 origin-bottom rounded-sm bg-brand"
+                className="h-4 w-2 origin-bottom rounded-sm bg-foreground"
               />
               <motion.span
                 initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ opacity: 0.85, scaleY: 1 }}
                 transition={{ delay: 0.65, duration: 0.35, ease: easeOut }}
-                className="h-5 w-2 origin-bottom rounded-sm bg-brand"
+                className="h-5 w-2 origin-bottom rounded-sm bg-foreground"
               />
               <motion.span
                 initial={{ opacity: 0, scaleY: 0 }}
                 animate={{ opacity: 1, scaleY: 1 }}
                 transition={{ delay: 0.7, duration: 0.35, ease: easeOut }}
-                className="h-6 w-2 origin-bottom rounded-sm bg-brand"
+                className="h-6 w-2 origin-bottom rounded-sm bg-foreground"
               />
             </motion.div>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.35 }}
-          className="flex min-h-screen items-center border-t border-border bg-muted/35"
+          className="flex min-h-screen items-center border-t border-border bg-muted/45"
         >
           <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
             <motion.h2 variants={revealItem} className="text-3xl font-semibold sm:text-4xl">
@@ -120,18 +120,16 @@ export default function Home() {
 
             <motion.article
               variants={revealItem}
-              className="mt-10 grid gap-8 rounded-md border border-border bg-card p-5 shadow-sm sm:p-7 md:grid-cols-[1fr_auto] md:items-center md:gap-12"
+              className="mt-10 grid gap-8 border-y border-border py-6 sm:py-7 md:grid-cols-[1fr_auto] md:items-center md:gap-12"
             >
               <div className="flex items-start gap-4">
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-md bg-brand text-brand-foreground">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-md bg-foreground text-background">
                   <BookOpen className="size-5" aria-hidden="true" />
                 </span>
                 <div>
                   <div className="flex flex-wrap items-center gap-2.5">
                     <h3 className="text-xl font-semibold">花生词汇</h3>
-                    <span className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-medium text-brand-strong dark:bg-brand-soft/50 dark:text-brand">
-                      首个内容
-                    </span>
+                    <span className="text-xs text-muted-foreground">首个内容</span>
                   </div>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">
                     公考高频成语与词汇，按顺序积累，随时继续。
