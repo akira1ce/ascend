@@ -22,7 +22,7 @@ export function VocabList({ groups }: { groups: VocabGroup[] }) {
 							<Link
 								key={entry.id}
 								href={`/peanut-vocab/${entry.id}`}
-								className="group hover:bg-muted/70 focus-visible:bg-muted grid min-h-[4.5rem] grid-cols-[2.75rem_minmax(0,1fr)_1.25rem] items-center rounded-md px-3 py-2.5 transition-[background-color,transform] duration-200 outline-none hover:-translate-y-px focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-inset active:translate-y-0"
+								className="group hover:bg-muted/70 focus-visible:bg-muted grid min-h-18 grid-cols-[2.75rem_minmax(0,1fr)_1.25rem] items-center rounded-md px-3 py-2.5 transition-[background-color,transform] duration-200 outline-none hover:-translate-y-px focus-visible:ring-2 focus-visible:ring-[var(--peanut-accent)] focus-visible:ring-inset active:translate-y-0"
 							>
 								<span className="text-muted-foreground font-mono text-xs tabular-nums">{String(entry.id).padStart(3, "0")}</span>
 								<span className="min-w-0 pr-3">
@@ -30,7 +30,7 @@ export function VocabList({ groups }: { groups: VocabGroup[] }) {
 									<span className="text-muted-foreground mt-0.5 block text-sm leading-5">{entry.distinction}</span>
 								</span>
 								<ArrowRight
-									className="text-muted-foreground size-4 transition-[color,transform] duration-200 group-hover:translate-x-1 group-hover:text-[var(--peanut-accent)]"
+									className="text-muted-foreground size-4 transition-[color,transform] duration-200 group-hover:translate-x-1 group-hover:text-(--peanut-accent)"
 									aria-hidden="true"
 								/>
 							</Link>

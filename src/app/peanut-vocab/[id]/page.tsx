@@ -57,7 +57,7 @@ export default async function VocabDetailPage({ params }: PageProps) {
 				<article className="py-10 sm:py-16">
 					<div className="grid gap-8 md:grid-cols-[12rem_minmax(0,1fr)] md:gap-12">
 						<div className="text-muted-foreground text-sm">
-							<p className="font-medium text-[var(--peanut-accent)]">{entry.type === "idiom" ? "成语" : "词语"}</p>
+							<p className="font-medium text-(--peanut-accent)">{entry.type === "idiom" ? "成语" : "词语"}</p>
 							<p className="mt-3 max-w-48 leading-6">{entry.group}</p>
 						</div>
 
@@ -67,7 +67,7 @@ export default async function VocabDetailPage({ params }: PageProps) {
 
 							<section className="mt-12 sm:mt-16" aria-labelledby="definition-heading">
 								<div className="mb-4 flex items-center gap-3">
-									<span className="h-px w-6 bg-[var(--peanut-accent)]" aria-hidden="true" />
+									<span className="h-px w-6 bg-(--peanut-accent)" aria-hidden="true" />
 									<h2 id="definition-heading" className="text-sm font-semibold">
 										词义解析
 									</h2>
