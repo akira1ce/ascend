@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /** 记录学习进度 */
 export const RecordProgress = () => {
@@ -18,7 +18,13 @@ export const RecordProgress = () => {
 
 /** 继续学习 */
 export const ResumeLearning = () => {
-	const id = localStorage.getItem("peanut-vocab-index");
+	const [id, setId] = useState<string>();
+
+	useEffect(() => {
+		const _id = localStorage.getItem("peanut-vocab-index");
+		_id && setId(_id);
+	}, []);
+
 	return (
 		<Link className="text-background bg-(--peanut-accent) p-3" href={`/peanut-vocab/${id}`}>
 			{id ? "继续学习" : "开始学习"}
