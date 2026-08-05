@@ -1,6 +1,7 @@
 import { ArrowLeft, BookOpenText } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ResumeLearning } from "./components/record-progress";
 import { VocabList } from "./components/vocab-list";
 import { contiguousGroups, uniqueGroupCount, vocabEntries } from "./data";
 
@@ -22,7 +23,7 @@ export default function PeanutVocabPage() {
 						全部内容
 					</Link>
 
-					<div className="mt-9 grid gap-9 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+					<div className="my-9 grid gap-9 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
 						<div>
 							<div className="text-muted-foreground flex items-center gap-2.5">
 								<BookOpenText className="size-4" aria-hidden="true" />
@@ -38,6 +39,8 @@ export default function PeanutVocabPage() {
 							共 {vocabEntries.length} 条词汇，归入 {uniqueGroupCount} 个主题
 						</p>
 					</div>
+
+					<ResumeLearning />
 				</div>
 			</header>
 

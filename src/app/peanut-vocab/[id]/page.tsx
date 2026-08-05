@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Definition } from "../components/definition";
 import { DetailNavigation } from "../components/detail-navigation";
+import { RecordProgress } from "../components/record-progress";
 import { getAdjacentEntries, getVocabEntry, vocabEntries } from "../data";
 
 type PageProps = {
@@ -74,6 +75,7 @@ export default async function VocabDetailPage({ params }: PageProps) {
 
 				<DetailNavigation previous={previous} next={next} />
 			</div>
+			<RecordProgress />
 		</main>
 	);
 }

@@ -91,7 +91,7 @@ export default function Home() {
 					</div>
 
 					<motion.div variants={revealItem} className="absolute bottom-5">
-						<Button asChild variant="outline" size="icon" className="active:scale-[0.98]">
+						<Button asChild variant="ghost" size="icon" className="active:scale-[0.98]">
 							<a href="#tools" aria-label="查看全部内容" title="查看全部内容">
 								<ArrowDown className="size-4" aria-hidden="true" />
 							</a>
@@ -131,7 +131,7 @@ export default function Home() {
 									</div>
 								</div>
 
-								<div className="border-border flex items-center justify-between gap-6 border-t pt-5 md:min-w-44 md:border-t-0 md:border-l md:pt-0 md:pl-8">
+								<div className="border-border flex items-center justify-between gap-6 border-t px-4 pt-5 md:min-w-44 md:border-t-0 md:border-l md:px-8 md:pt-0">
 									<div>
 										<p className="font-mono text-3xl font-semibold tabular-nums">807</p>
 										<p className="text-muted-foreground mt-1 text-xs">条词汇内容</p>
