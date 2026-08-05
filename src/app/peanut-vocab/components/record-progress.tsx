@@ -18,16 +18,16 @@ export const RecordProgress = () => {
 
 /** 继续学习 */
 export const ResumeLearning = () => {
-	const [id, setId] = useState<string>();
+	const [id, setId] = useState(1);
 
 	useEffect(() => {
-		const _id = localStorage.getItem("peanut-vocab-index");
-		_id && setId(_id);
+		const _id = localStorage.getItem("peanut-vocab-index") || 1;
+		setId(+_id);
 	}, []);
 
 	return (
 		<Link className="text-background bg-(--peanut-accent) p-3" href={`/peanut-vocab/${id}`}>
-			{id ? "继续学习" : "开始学习"}
+			{id !== 1 ? "继续学习" : "开始学习"}
 		</Link>
 	);
 };
