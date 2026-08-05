@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
 
 const headerTransition = {
 	duration: 0.3,
@@ -67,12 +68,7 @@ export function SiteHeader() {
 					</Link>
 
 					<nav className="flex items-center gap-1.5" aria-label="主导航">
-						<Link
-							href="/#tools"
-							className="text-muted-foreground [@media(hover:hover)]:hover:bg-accent [@media(hover:hover)]:hover:text-foreground inline-flex min-h-10 min-w-10 items-center justify-center gap-2 rounded-full px-2.5 text-sm transition-colors sm:px-3"
-							aria-label="查看全部内容"
-							title="查看全部内容"
-						>
+						<Link href="/#tools" className="px-2.5 sm:px-3" aria-label="查看全部内容" title="查看全部内容">
 							<LibraryBig className="size-4 shrink-0" aria-hidden="true" />
 						</Link>
 						<span className="bg-border mx-1 h-5 w-px" aria-hidden="true" />
