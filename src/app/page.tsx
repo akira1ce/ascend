@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowDown, ArrowRight, BookOpen, Calculator } from "lucide-react";
 import { motion, MotionConfig } from "motion/react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -135,6 +135,38 @@ export default function Home() {
 									<div>
 										<p className="font-mono text-3xl font-semibold tabular-nums">807</p>
 										<p className="text-muted-foreground mt-1 text-xs">条词汇内容</p>
+									</div>
+									<ArrowRight
+										className="text-muted-foreground size-5 -rotate-45 transition-transform duration-200 group-hover:rotate-0"
+										aria-hidden="true"
+									/>
+								</div>
+							</Link>
+						</motion.article>
+
+						<motion.article variants={revealItem} className="mt-4">
+							<Link
+								href="/data-analysis"
+								className="group border-border grid gap-8 rounded border border-y border-dashed p-2 py-6 transition-[background-color,transform] outline-none hover:bg-background/40 sm:py-7 md:grid-cols-[1fr_auto] md:items-center md:gap-12"
+								aria-label="打开资料分析速查"
+							>
+								<div className="flex items-start gap-4">
+									<span className="flex size-12 shrink-0 items-center justify-center">
+										<Calculator className="size-5" aria-hidden="true" />
+									</span>
+									<div>
+										<div className="flex flex-wrap items-center gap-2.5">
+											<h3 className="text-xl font-semibold">资料分析</h3>
+											<span className="text-muted-foreground text-xs">速查手册</span>
+										</div>
+										<p className="text-muted-foreground mt-2 text-sm leading-6">资料分析考点、公式与速记，一页刷完。</p>
+									</div>
+								</div>
+
+								<div className="border-border flex items-center justify-between gap-6 border-t px-4 pt-5 md:min-w-44 md:border-t-0 md:border-l md:px-8 md:pt-0">
+									<div>
+										<p className="font-mono text-3xl font-semibold tabular-nums">44</p>
+										<p className="text-muted-foreground mt-1 text-xs">个知识点</p>
 									</div>
 									<ArrowRight
 										className="text-muted-foreground size-5 -rotate-45 transition-transform duration-200 group-hover:rotate-0"

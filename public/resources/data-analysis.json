@@ -1,0 +1,671 @@
+{
+  "chapters": [
+    {
+      "id": "basics",
+      "title": "基础概念",
+      "description": "时间口径、单位与材料阅读，是后面所有计算的前提。"
+    },
+    {
+      "id": "growth",
+      "title": "增长",
+      "description": "增长率和增长量是资料分析的主干，先判断问的是率还是量。"
+    },
+    {
+      "id": "base",
+      "title": "基期与现期",
+      "description": "现期与基期的互推，核心是直除和化除为乘。"
+    },
+    {
+      "id": "proportion",
+      "title": "比重",
+      "description": "比重既考方向也考数值，注意百分点和增速差。"
+    },
+    {
+      "id": "average",
+      "title": "平均数",
+      "description": "平均数、基期平均数和平均数增长率，三者容易混淆。"
+    },
+    {
+      "id": "multiple",
+      "title": "倍数与番数",
+      "description": "倍数、多几倍与翻番，注意差 1 和 2 的幂次。"
+    },
+    {
+      "id": "comprehensive",
+      "title": "综合分析",
+      "description": "综合分析题不追求全算，先易后难，找到答案就停。"
+    },
+    {
+      "id": "speed",
+      "title": "速算技巧",
+      "description": "速算方法决定做题速度，按选项差距选择精度。"
+    }
+  ],
+  "points": [
+    {
+      "id": 1,
+      "chapterId": "basics",
+      "title": "同比与环比",
+      "recognition": ["同比 / 环比", "与上年同期比", "与上月比"],
+      "formulas": [
+        {
+          "label": "同比增长率",
+          "tex": "r_{\\text{同比}} = \\frac{A - A_{\\text{上年同期}}}{A_{\\text{上年同期}}}"
+        },
+        {
+          "label": "环比增长率",
+          "tex": "r_{\\text{环比}} = \\frac{A - A_{\\text{上期}}}{A_{\\text{上期}}}"
+        }
+      ],
+      "tips": ["同比看年，环比看月；先对齐材料的时间口径。"]
+    },
+    {
+      "id": 2,
+      "chapterId": "basics",
+      "title": "百分数与百分点",
+      "recognition": ["提高了…%", "提高了…个百分点"],
+      "formulas": [
+        {
+          "label": "百分点",
+          "tex": "\\Delta = p_1 - p_2"
+        }
+      ],
+      "tips": ["增长率本身用百分数，增长率的变化、比重变化用百分点。"]
+    },
+    {
+      "id": 3,
+      "chapterId": "basics",
+      "title": "顺差与逆差",
+      "recognition": ["进出口", "贸易差额", "顺差 / 逆差"],
+      "formulas": [
+        {
+          "label": "顺差",
+          "tex": "\\text{顺差} = \\text{出口} - \\text{进口}"
+        },
+        {
+          "label": "逆差",
+          "tex": "\\text{逆差} = \\text{进口} - \\text{出口}"
+        }
+      ],
+      "tips": ["进出口总额 = 出口 + 进口；顺差为正，逆差为负。"]
+    },
+    {
+      "id": 4,
+      "chapterId": "basics",
+      "title": "累计与当期",
+      "recognition": ["1—N 月累计", "当月", "累计增速"],
+      "formulas": [
+        {
+          "label": "当月值",
+          "tex": "\\text{当月} = \\text{累计}_N - \\text{累计}_{N-1}"
+        }
+      ],
+      "tips": ["累计不是当月；先确认材料给的是累计值还是单月值。"]
+    },
+    {
+      "id": 5,
+      "chapterId": "basics",
+      "title": "现期与基期",
+      "recognition": ["今年 / 去年", "本期 / 上期", "基期"],
+      "formulas": [
+        {
+          "label": "现期",
+          "tex": "A = B(1 + r)"
+        },
+        {
+          "label": "基期",
+          "tex": "B = \\frac{A}{1 + r}"
+        }
+      ],
+      "tips": ["问题问的那一年是现期，被比较的那一年是基期。"]
+    },
+    {
+      "id": 6,
+      "chapterId": "basics",
+      "title": "增长量与增长率",
+      "recognition": ["增长…（带单位）", "增长…%"],
+      "formulas": [
+        {
+          "label": "增长量",
+          "tex": "X = A - B"
+        },
+        {
+          "label": "增长率",
+          "tex": "r = \\frac{X}{B} = \\frac{A}{B} - 1"
+        }
+      ],
+      "tips": ["带单位问的是增长量，带 % 问的是增长率；增长最多问的是量。"]
+    },
+    {
+      "id": 7,
+      "chapterId": "basics",
+      "title": "翻番与倍数",
+      "recognition": ["翻番", "是…倍", "多…倍"],
+      "formulas": [
+        {
+          "label": "翻 n 番",
+          "tex": "A = B \\times 2^n"
+        },
+        {
+          "label": "是几倍",
+          "tex": "\\frac{A}{B}"
+        },
+        {
+          "label": "多几倍",
+          "tex": "\\frac{A}{B} - 1"
+        }
+      ],
+      "tips": ["翻番按 2 的幂次，不是乘以 n。"]
+    },
+    {
+      "id": 8,
+      "chapterId": "basics",
+      "title": "材料阅读与单位",
+      "recognition": ["表格 / 图形 / 文字材料", "万 / 亿 / ‰"],
+      "formulas": [
+        {
+          "label": "单位换算",
+          "tex": "1\\text{亿} = 10^4\\text{万}"
+        }
+      ],
+      "tips": ["先看表头和单位；人口自然增长率常用 ‰。"]
+    },
+    {
+      "id": 9,
+      "chapterId": "growth",
+      "title": "增长率计算",
+      "recognition": ["增长 / 下降 + %", "两个年份比较"],
+      "formulas": [
+        {
+          "label": "增长率",
+          "tex": "r = \\frac{A - B}{B}"
+        }
+      ],
+      "tips": ["A/B 型先直除看首位，不必精确算。"]
+    },
+    {
+      "id": 10,
+      "chapterId": "growth",
+      "title": "增长率比较",
+      "recognition": ["增速最快 / 最慢", "增幅最大"],
+      "formulas": [
+        {
+          "label": "比较",
+          "tex": "\\frac{A_1}{B_1}\\ \\text{vs}\\ \\frac{A_2}{B_2}"
+        }
+      ],
+      "tips": ["现期/基期越大增速越大；用分数比较。"]
+    },
+    {
+      "id": 11,
+      "chapterId": "growth",
+      "title": "增长率判断",
+      "recognition": ["增速超过 10% 的年份有几个"],
+      "formulas": [
+        {
+          "label": "判断",
+          "tex": "A > B(1 + 10\\%)"
+        }
+      ],
+      "tips": ["用基期 × (1+阈值) 与现期比较，不必算出增长率。"]
+    },
+    {
+      "id": 12,
+      "chapterId": "growth",
+      "title": "隔年增长率",
+      "recognition": ["隔一年", "隔年", "两年合计增速"],
+      "formulas": [
+        {
+          "label": "隔年增长率",
+          "tex": "r = r_1 + r_2 + r_1 r_2"
+        }
+      ],
+      "tips": ["先加后乘；r₁、r₂ 是相邻两年的增速。"]
+    },
+    {
+      "id": 13,
+      "chapterId": "growth",
+      "title": "隔年基期",
+      "recognition": ["已知今年求前年", "隔年基期"],
+      "formulas": [
+        {
+          "label": "隔年基期",
+          "tex": "B = \\frac{A}{(1 + r_1)(1 + r_2)}"
+        }
+      ],
+      "tips": ["也可先求去年，再求前年。"]
+    },
+    {
+      "id": 14,
+      "chapterId": "growth",
+      "title": "年均增长率",
+      "recognition": ["年均增长", "平均每年增长"],
+      "formulas": [
+        {
+          "label": "年均增长率",
+          "tex": "(1 + r)^n = \\frac{\\text{末期}}{\\text{初期}}"
+        }
+      ],
+      "tips": ["n 是年份差：2018→2023 是 5 年；比较时可直接比末期/初期。"]
+    },
+    {
+      "id": 15,
+      "chapterId": "growth",
+      "title": "合成增长率",
+      "recognition": ["两部分合成整体", "整体由两部分构成"],
+      "formulas": [
+        {
+          "label": "区间",
+          "tex": "r \\in [\\min(r_1, r_2), \\max(r_1, r_2)]"
+        }
+      ],
+      "tips": ["整体增速介于两部分之间，偏向基期量较大的一方（盐水思想）。"]
+    },
+    {
+      "id": 16,
+      "chapterId": "growth",
+      "title": "增长量计算",
+      "recognition": ["增长 / 增加 + 具体单位", "净增"],
+      "formulas": [
+        {
+          "label": "增长量",
+          "tex": "X = A - B = Br = \\frac{Ar}{1+r}"
+        }
+      ],
+      "tips": ["已知现期和增速用 415 份数；已知基期直接乘。"]
+    },
+    {
+      "id": 17,
+      "chapterId": "growth",
+      "title": "415 份数法",
+      "recognition": ["已知现期 + 增长率，求增长量"],
+      "formulas": [
+        {
+          "label": "份数关系",
+          "tex": "\\text{基期}:\\text{增长量}:\\text{现期} = 100:r:(100+r)"
+        },
+        {
+          "label": "增长量",
+          "tex": "X = \\frac{A}{100+r} \\times r"
+        }
+      ],
+      "tips": ["先把比例化到最简：r=25% 时 5:1。"]
+    },
+    {
+      "id": 18,
+      "chapterId": "growth",
+      "title": "增长量比较",
+      "recognition": ["增长最多 / 最少", "增量最大"],
+      "formulas": [
+        {
+          "label": "增长量",
+          "tex": "X = \\frac{Ar}{1+r}"
+        }
+      ],
+      "tips": ["现期大且增速大，增长量必大；一大一小时用分数比较或估算。"]
+    },
+    {
+      "id": 19,
+      "chapterId": "base",
+      "title": "基期量计算",
+      "recognition": ["求上年 / 基期", "上年同期"],
+      "formulas": [
+        {
+          "label": "基期量",
+          "tex": "B = \\frac{A}{1+r}"
+        }
+      ],
+      "tips": ["直除；r 为负且 |r|<5% 时考虑化除为乘。"]
+    },
+    {
+      "id": 20,
+      "chapterId": "base",
+      "title": "基期量比较",
+      "recognition": ["基期最大 / 最小"],
+      "formulas": [
+        {
+          "label": "比较",
+          "tex": "\\frac{A_1}{1+r_1}\\ \\text{vs}\\ \\frac{A_2}{1+r_2}"
+        }
+      ],
+      "tips": ["增速接近时直接比现期；否则用分数比较。"]
+    },
+    {
+      "id": 21,
+      "chapterId": "base",
+      "title": "现期量计算",
+      "recognition": ["求今年 / 下一年", "按增速推算"],
+      "formulas": [
+        {
+          "label": "现期量",
+          "tex": "A = B(1+r)"
+        }
+      ],
+      "tips": ["增速为负时别忘减；跨两年要连乘。"]
+    },
+    {
+      "id": 22,
+      "chapterId": "base",
+      "title": "化除为乘",
+      "recognition": ["求基期", "增长率很小（|r|<5%）"],
+      "formulas": [
+        {
+          "label": "正增长",
+          "tex": "\\frac{A}{1+r} \\approx A(1-r)"
+        },
+        {
+          "label": "负增长",
+          "tex": "\\frac{A}{1-r} \\approx A(1+r)"
+        }
+      ],
+      "tips": ["只在 |r| 很小时使用，符号与分母相反。"]
+    },
+    {
+      "id": 23,
+      "chapterId": "proportion",
+      "title": "现期比重",
+      "recognition": ["A 占 B 的比重", "占比"],
+      "formulas": [
+        {
+          "label": "比重",
+          "tex": "\\text{比重} = \\frac{\\text{部分}}{\\text{整体}}"
+        }
+      ],
+      "tips": ["部分和整体的口径、时间必须一致。"]
+    },
+    {
+      "id": 24,
+      "chapterId": "proportion",
+      "title": "基期比重",
+      "recognition": ["上年比重", "基期占比"],
+      "formulas": [
+        {
+          "label": "基期比重",
+          "tex": "\\frac{A}{B} \\times \\frac{1+b}{1+a}",
+          "note": "a=部分增速，b=整体增速"
+        }
+      ],
+      "tips": ["分子是整体增速，分母是部分增速，别记反。"]
+    },
+    {
+      "id": 25,
+      "chapterId": "proportion",
+      "title": "两期比重变化方向",
+      "recognition": ["比重比上年上升 / 下降"],
+      "formulas": [
+        {
+          "label": "方向",
+          "tex": "a > b \\Rightarrow \\text{上升};\\quad a < b \\Rightarrow \\text{下降}"
+        }
+      ],
+      "tips": ["只比部分与整体的增速，不用计算。"]
+    },
+    {
+      "id": 26,
+      "chapterId": "proportion",
+      "title": "两期比重差",
+      "recognition": ["上升 / 下降几个百分点"],
+      "formulas": [
+        {
+          "label": "比重差",
+          "tex": "\\frac{A}{B} \\times \\frac{a-b}{1+a}"
+        }
+      ],
+      "tips": ["单位是百分点；答案远小于 |a-b|，选项里可直接选较小值。"]
+    },
+    {
+      "id": 27,
+      "chapterId": "average",
+      "title": "现期平均数",
+      "recognition": ["平均", "每", "人均"],
+      "formulas": [
+        {
+          "label": "平均数",
+          "tex": "\\text{平均数} = \\frac{\\text{总量}}{\\text{份数}}"
+        }
+      ],
+      "tips": ["先确定总量和份数分别是谁。"]
+    },
+    {
+      "id": 28,
+      "chapterId": "average",
+      "title": "基期平均数",
+      "recognition": ["上年平均", "基期平均数"],
+      "formulas": [
+        {
+          "label": "基期平均数",
+          "tex": "\\frac{A}{B} \\times \\frac{1+b}{1+a}",
+          "note": "a=总量增速，b=份数增速"
+        }
+      ],
+      "tips": ["与基期比重同构，注意增速对应关系。"]
+    },
+    {
+      "id": 29,
+      "chapterId": "average",
+      "title": "平均数增长率",
+      "recognition": ["平均数 + 增长 / 减少 + %", "人均…增长"],
+      "formulas": [
+        {
+          "label": "平均数增长率",
+          "tex": "r = \\frac{a-b}{1+b}"
+        }
+      ],
+      "tips": ["选项是 % 不是百分点；b>0 时答案略小于 |a-b|。"]
+    },
+    {
+      "id": 30,
+      "chapterId": "average",
+      "title": "平均数比较",
+      "recognition": ["平均最高 / 最低"],
+      "formulas": [
+        {
+          "label": "比较",
+          "tex": "\\frac{A_1}{B_1}\\ \\text{vs}\\ \\frac{A_2}{B_2}"
+        }
+      ],
+      "tips": ["分子大、分母小者更大；用分数比较。"]
+    },
+    {
+      "id": 31,
+      "chapterId": "multiple",
+      "title": "是几倍与多几倍",
+      "recognition": ["是…倍", "多…倍", "增长了…倍"],
+      "formulas": [
+        {
+          "label": "是几倍",
+          "tex": "\\frac{A}{B}"
+        },
+        {
+          "label": "多几倍",
+          "tex": "\\frac{A}{B} - 1"
+        }
+      ],
+      "tips": ["多几倍 = 是几倍 − 1；增长 n 倍 = 是 (n+1) 倍。"]
+    },
+    {
+      "id": 32,
+      "chapterId": "multiple",
+      "title": "基期倍数",
+      "recognition": ["上年 A 是 B 的几倍"],
+      "formulas": [
+        {
+          "label": "基期倍数",
+          "tex": "\\frac{A}{B} \\times \\frac{1+b}{1+a}"
+        }
+      ],
+      "tips": ["与基期比重、基期平均数同构。"]
+    },
+    {
+      "id": 33,
+      "chapterId": "multiple",
+      "title": "翻番",
+      "recognition": ["翻了几番"],
+      "formulas": [
+        {
+          "label": "翻番",
+          "tex": "\\text{翻 } n \\text{ 番} = \\times 2^n"
+        }
+      ],
+      "tips": ["翻 1 番 = 2 倍，翻 2 番 = 4 倍，翻 3 番 = 8 倍。"]
+    },
+    {
+      "id": 34,
+      "chapterId": "comprehensive",
+      "title": "综合分析题策略",
+      "recognition": ["以下说法正确 / 错误的是", "能够推出的是"],
+      "formulas": [],
+      "tips": ["先易后难；优先验证计算量小的选项；找到一个就停。"]
+    },
+    {
+      "id": 35,
+      "chapterId": "comprehensive",
+      "title": "选项与陷阱",
+      "recognition": ["超过 / 不足 / 约 / 接近", "同比 / 环比"],
+      "formulas": [
+        {
+          "label": "词义",
+          "tex": "\\text{超过} >;\\ \\text{不低于} \\ge;\\ \\text{不足} <"
+        }
+      ],
+      "tips": ["注意时间范围、单位、累计口径；接近是略小于。"]
+    },
+    {
+      "id": 36,
+      "chapterId": "speed",
+      "title": "截位直除",
+      "recognition": ["A/B 型", "选项差距明显"],
+      "formulas": [
+        {
+          "label": "截位",
+          "tex": "\\frac{a}{b} \\approx \\frac{a'}{b'}"
+        }
+      ],
+      "tips": ["选项首位不同截 2 位；首位相同截 3 位；分母四舍五入。"]
+    },
+    {
+      "id": 37,
+      "chapterId": "speed",
+      "title": "分数比较",
+      "recognition": ["比较两个分数大小"],
+      "formulas": [
+        {
+          "label": "交叉相乘",
+          "tex": "\\frac{a}{b} > \\frac{c}{d} \\iff ad > bc"
+        }
+      ],
+      "tips": ["分子大分母小者大；同分子比分母；直除看首位。"]
+    },
+    {
+      "id": 38,
+      "chapterId": "speed",
+      "title": "百化分",
+      "recognition": ["百分数接近常见分数"],
+      "formulas": [
+        {
+          "label": "常用分数",
+          "tex": "\\frac{1}{6} \\approx 16.7\\%,\\ \\frac{1}{7} \\approx 14.3\\%,\\ \\frac{1}{8} = 12.5\\%,\\ \\frac{1}{9} \\approx 11.1\\%,\\ \\frac{1}{11} \\approx 9.1\\%"
+        }
+      ],
+      "tips": ["1/2=50%，1/3≈33.3%，1/4=25%，1/5=20%；背熟后乘除转分数。"]
+    },
+    {
+      "id": 39,
+      "chapterId": "speed",
+      "title": "错位加减法",
+      "recognition": ["两个接近的数相乘", "近似计算"],
+      "formulas": [
+        {
+          "label": "近似",
+          "tex": "(1 + r_1)(1 + r_2) \\approx 1 + r_1 + r_2"
+        }
+      ],
+      "tips": ["交叉项 r₁r₂ 很小时可忽略；r 较大时保留交叉项。"]
+    },
+    {
+      "id": 40,
+      "chapterId": "speed",
+      "title": "假设分配法",
+      "recognition": ["已知现期 + 增长率，求基期"],
+      "formulas": [
+        {
+          "label": "假设增长量",
+          "tex": "X_{\\text{假}} = A r"
+        },
+        {
+          "label": "真实增长量",
+          "tex": "X \\approx \\frac{A r}{1 + r}"
+        },
+        {
+          "label": "基期",
+          "tex": "B = A - X"
+        }
+      ],
+      "tips": ["增速在 5%–25% 之间精度较好；增速过大改用直除。"]
+    },
+    {
+      "id": 41,
+      "chapterId": "speed",
+      "title": "尾数法",
+      "recognition": ["加减运算", "选项尾数不同"],
+      "formulas": [
+        {
+          "label": "末位",
+          "tex": "a \\pm b \\equiv c \\pmod{10}"
+        }
+      ],
+      "tips": ["只算末位或末两位；注意进位、借位；乘除不适用。"]
+    },
+    {
+      "id": 42,
+      "chapterId": "speed",
+      "title": "特殊分数比较",
+      "recognition": ["增长率接近 1/3、1/6、1/7"],
+      "formulas": [
+        {
+          "label": "转换",
+          "tex": "33.3\\% \\approx \\frac{1}{3},\\ 16.7\\% \\approx \\frac{1}{6},\\ 14.3\\% \\approx \\frac{1}{7}"
+        }
+      ],
+      "tips": ["转成分数后约分，比较更直观。"]
+    },
+    {
+      "id": 43,
+      "chapterId": "speed",
+      "title": "估算与首数法",
+      "recognition": ["选项差距大", "只要首位"],
+      "formulas": [
+        {
+          "label": "首数",
+          "tex": "\\frac{a}{b} \\approx \\text{首位} + \\cdots"
+        }
+      ],
+      "tips": ["先看选项再动笔；选项差距越大，估算越安全。"]
+    },
+    {
+      "id": 44,
+      "chapterId": "speed",
+      "title": "ABRX 公式速查",
+      "recognition": ["四个量互推", "知二求二"],
+      "formulas": [
+        {
+          "label": "现期",
+          "tex": "A = B(1+r)"
+        },
+        {
+          "label": "基期",
+          "tex": "B = \\frac{A}{1+r}"
+        },
+        {
+          "label": "增长量",
+          "tex": "X = A - B = Br"
+        },
+        {
+          "label": "增长率",
+          "tex": "r = \\frac{X}{B}"
+        }
+      ],
+      "tips": ["先定时间口径，再判断已知的是哪两个量。"]
+    }
+  ]
+}
