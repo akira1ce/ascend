@@ -1,4 +1,4 @@
-import rawEntries from "../../../public/resources/peanut-vocab-800.json";
+import rawEntries from "@public/resources/peanut-vocab-800.json";
 
 type RawVocabEntry = {
 	id: number;

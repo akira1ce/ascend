@@ -1,4 +1,4 @@
-import rawData from "../../../public/resources/data-analysis.json";
+import rawData from "@public/resources/data-analysis.json";
 
 export type Formula = {
 	label: string;
